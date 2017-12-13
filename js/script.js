@@ -24,6 +24,48 @@ function randomInt(a, b) {
   return a + Math.floor(Math.random() * (b+1-a));
 }
 
+function getComputerChoice(){
+    var choices = ["rock", "paper", "scissors"];
+    var index = Math.floor(Math.random()*3);
+    
+    console.log(choices[index])
+    return choices[index];
+    
+  }
+  
+$(document).ready(function(){
+  $("#rock").click(function() {
+    console.log("the user picked rock!");
+  });
+  
+  $("#paper").click(function() {
+    console.log("the user picked paper!");
+  });
+  
+  $("#scissors").click(function() {
+    console.log("the user picked scissors!");
+    var computerChoice = getComputerChoice();
+    play("scissors", computerChoice);
+    
+    
+  });
+  
+ 
+  
+  function play (userChoice, computerChoice){
+    if(userChoice == "scissors" && computerChoice=="scissors"){
+      console.log("No winner")
+    } else if (userChoice == "scissors" && computerChoice=="paper") {
+      console.log("Winner")
+    } else if (userChoice == "scissors" && computerChoice=="rock") {
+      console.log("Computer wins!")
+    }
+  }
+
+
+
+
+});
 // *************************** YOUR CODE BELOW *******************************
 //******************TEST EARLY AND OFTEN USING console.log() ******************
 //****************** SERIOUSLY TEST USING console.log()!!! ******************
