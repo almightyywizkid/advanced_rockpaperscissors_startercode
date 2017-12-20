@@ -32,7 +32,19 @@ function getComputerChoice(){
     return choices[index];
     
   }
+
+function callme() {
+  // write logic to pick rock, paper or scissors for player 2
+  // determine winner
+  // and display
   
+  //pick
+  var pick = getComputerChoice();
+  alert(pick);
+  document.getElementById("player2input1").textContent=pick;
+}  
+  
+
 $(document).ready(function(){
   $("#rock").click(function() {
     console.log("the user picked rock!");
